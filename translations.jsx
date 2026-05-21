@@ -33,6 +33,7 @@ const TRANSLATIONS = {
     secTypology: "ТИПОЛОГІЯ",
     secServices: "ПОСЛУГИ",
     secRoles: "РОЛІ",
+    secTeam: "КОМАНДА",
     secAdvantages: "ПЕРЕВАГИ",
     secProcess: "ПРОЦЕС",
     secStart: "РОЗПОЧАТИ",
@@ -132,6 +133,15 @@ const TRANSLATIONS = {
         note: "Авторський нагляд — у супровідному форматі за домовленістю." }
     ],
 
+    // ── Team
+    teamH1Pre: "Наша",
+    teamH1Em:  "команда",
+    team: [
+      { name: "Єлизавета Шиндер",   role: "Засновниця · Головний архітектор" },
+      { name: "Тетяна Граматик",    role: "Старший архітектор (Lead)" },
+      { name: "Олександр Погребний", role: "Старший архітектор · 3D-візуалізатор" }
+    ],
+
     // ── Advantages
     advH1Pre: "Чому клієнти обирають",
     advH1Em:  "SHINUY",
@@ -205,6 +215,7 @@ const TRANSLATIONS = {
     secTypology: "ТИПОЛОГИЯ",
     secServices: "УСЛУГИ",
     secRoles: "РОЛИ",
+    secTeam: "КОМАНДА",
     secAdvantages: "ПРЕИМУЩЕСТВА",
     secProcess: "ПРОЦЕСС",
     secStart: "НАЧАТЬ",
@@ -297,6 +308,14 @@ const TRANSLATIONS = {
         note: "Авторский надзор — в сопровождающем формате по договорённости." }
     ],
 
+    teamH1Pre: "Наша",
+    teamH1Em:  "команда",
+    team: [
+      { name: "Елизавета Шиндер",   role: "Основатель · Главный архитектор" },
+      { name: "Татьяна Граматик",   role: "Старший архитектор (Lead)" },
+      { name: "Александр Погребной", role: "Старший архитектор · 3D-визуализатор" }
+    ],
+
     advH1Pre: "Почему клиенты выбирают",
     advH1Em:  "SHINUY",
     advantages: [
@@ -365,6 +384,7 @@ const TRANSLATIONS = {
     secTypology: "TYPOLOGY",
     secServices: "SERVICES",
     secRoles: "ROLES",
+    secTeam: "TEAM",
     secAdvantages: "ADVANTAGES",
     secProcess: "PROCESS",
     secStart: "BEGIN",
@@ -455,6 +475,14 @@ const TRANSLATIONS = {
       { tag: "Role III", name: "General designer · Stage R",
         body: "SHINUY coordinates the full working documentation set: architectural, structural, engineering sections, clash control, and handover.",
         note: "Author supervision — in companion mode by agreement." }
+    ],
+
+    teamH1Pre: "Our",
+    teamH1Em:  "team",
+    team: [
+      { name: "Yelyzaveta Shynder", role: "Founder · Lead Architect" },
+      { name: "Tetiana Hramatyk",   role: "Senior Architect (Lead)" },
+      { name: "Oleksandr Pohrebnyi", role: "Senior Architect · 3D Visualizer" }
     ],
 
     advH1Pre: "Why clients choose",

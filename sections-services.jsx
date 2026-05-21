@@ -1,4 +1,4 @@
-/* sections-services.jsx — Services (9.9), Roles (9.11), Advantages (9.12) */
+/* sections-services.jsx — Services (9.9), Roles (9.11), Team, Advantages (9.12) */
 
 /* ─────────── SERVICES (9.9) ─────────── */
 function Services() {
@@ -153,6 +153,96 @@ function RoleRow({ idx, tag, name, body, note, img, alt, variant, important }) {
   );
 }
 
+/* ─────────── TEAM ─────────── */
+function Team() {
+  const t = useT();
+  return (
+    <section id="team" className="v-rhythm" style={{ background: "var(--bg-soft)", borderTop: "1px solid var(--hairline)" }}>
+      <div className="container">
+        <div style={{ display: "flex", flexDirection: "column", gap: 56 }}>
+          <FadeUp><SectionIndex n={7} label={t.secTeam} /></FadeUp>
+          <FadeUp delay={100}>
+            <h2 className="h-display serif" style={{ maxWidth: "18ch" }}>
+              {t.teamH1Pre} <em className="accent serif-italic">{t.teamH1Em}</em>.
+            </h2>
+          </FadeUp>
+
+          <div className="team-grid" style={{
+            marginTop: 24,
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "clamp(32px, 4vw, 56px)"
+          }}>
+            {t.team.map((m, i) => <TeamCard key={i} idx={i} name={m.name} role={m.role} />)}
+          </div>
+        </div>
+      </div>
+      <style>{`
+        @media (max-width: 900px) {
+          .team-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+        }
+      `}</style>
+    </section>
+  );
+}
+
+function TeamCard({ idx, name, role }) {
+  const initials = name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+  return (
+    <FadeUp delay={idx * 100}>
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        gap: 24,
+        paddingTop: 36,
+        borderTop: "1px solid var(--hairline-strong)"
+      }}>
+        <div
+          className="serif"
+          aria-hidden="true"
+          style={{
+            width: 96,
+            height: 96,
+            borderRadius: "50%",
+            border: "1px solid var(--accent-soft)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 26,
+            letterSpacing: "0.04em",
+            color: "var(--accent)",
+            background: "transparent"
+          }}
+        >
+          {initials}
+        </div>
+        <h3
+          className="serif"
+          style={{
+            margin: 0,
+            fontWeight: 300,
+            fontSize: "clamp(22px, 2vw, 26px)",
+            letterSpacing: "-0.01em",
+            color: "var(--text)",
+            lineHeight: 1.2,
+            maxWidth: "18ch"
+          }}
+        >
+          {name}
+        </h3>
+        <span className="eyebrow" style={{ color: "var(--accent)" }}>{role}</span>
+      </div>
+    </FadeUp>
+  );
+}
+
 /* ─────────── ADVANTAGES (9.12) ─────────── */
 function Advantages() {
   const t = useT();
@@ -160,7 +250,7 @@ function Advantages() {
     <section className="v-rhythm" style={{ background: "var(--bg)" }}>
       <div className="container">
         <div style={{ display: "flex", flexDirection: "column", gap: 56 }}>
-          <FadeUp><SectionIndex n={7} label={t.secAdvantages} /></FadeUp>
+          <FadeUp><SectionIndex n={8} label={t.secAdvantages} /></FadeUp>
 
           <div className="adv-head" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 6vw, 96px)", alignItems: "end" }}>
             <FadeUp delay={100}>
@@ -220,4 +310,4 @@ function AdvRow({ rom, cap, def }) {
   );
 }
 
-Object.assign(window, { Services, Roles, Advantages });
+Object.assign(window, { Services, Roles, Team, Advantages });

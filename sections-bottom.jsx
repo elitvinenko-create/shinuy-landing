@@ -18,7 +18,7 @@ function Process() {
     <section id="process" className="v-rhythm" style={{ background: "var(--bg)" }}>
       <div className="container">
         <div style={{ display: "flex", flexDirection: "column", gap: 56 }}>
-          <FadeUp><SectionIndex n={8} label={t.secProcess} /></FadeUp>
+          <FadeUp><SectionIndex n={9} label={t.secProcess} /></FadeUp>
           <FadeUp delay={100}>
             <h2 className="h-display serif" style={{ maxWidth: "14ch" }}>
               {t.processH1Pre} <em className="accent serif-italic">{t.processH1Em}</em>.
@@ -181,7 +181,7 @@ function CTA() {
 
       <div className="container" style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "120px 0" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 36, alignItems: "center", maxWidth: 720, margin: "0 auto" }}>
-          <FadeUp><SectionIndex n={9} label={t.secStart} /></FadeUp>
+          <FadeUp><SectionIndex n={10} label={t.secStart} /></FadeUp>
           <FadeUp delay={120}>
             <h2 className="h-display serif" style={{ textAlign: "center", maxWidth: "18ch" }}>
               {t.ctaH1Pre} <em className="accent serif-italic">{t.ctaH1Em}</em>{t.ctaH1Post}

@@ -64,6 +64,7 @@ function InnerApp({ tweaks }) {
         <Typology />
         <Services />
         <Roles />
+        <Team />
         <Advantages />
         <Process />
 
