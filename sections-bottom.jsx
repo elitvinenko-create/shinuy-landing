@@ -226,7 +226,7 @@ function Footer() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24, alignItems: "center" }} className="ft-grid">
         <a href="#top" aria-label="SHINUY · Architecture, Engineering & Design" style={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
           <img
-            src={window.__resources[theme === "dark" ? "logoDark" : "logoLight"]}
+            src={theme === "dark" ? "assets/logo_dark.svg" : "assets/logo_light.svg"}
             alt="SHINUY"
             style={{ height: 64, width: "auto", display: "block", objectFit: "contain", filter: theme === "dark" ? "brightness(1.05)" : "none" }}
           />

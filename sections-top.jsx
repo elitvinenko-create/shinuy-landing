@@ -33,7 +33,7 @@ function Nav() {
         <a href="#top" aria-label="SHINUY · Architecture, Engineering & Design"
            style={{ display: "flex", alignItems: "center", textDecoration: "none", height: 84 }}>
           <img
-            src={window.__resources[theme === "dark" ? "logoDark" : "logoLight"]}
+            src={theme === "dark" ? "assets/logo_dark.svg" : "assets/logo_light.svg"}
             alt="SHINUY · Architecture, Engineering & Design"
             style={{
               height: 80, width: "auto", display: "block",
