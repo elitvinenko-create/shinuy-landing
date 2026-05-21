@@ -193,14 +193,44 @@ function FadeUp({ children, delay = 0, as: As = "div", style, className = "" }) 
 }
 
 /* ─────────── Photography sources ───────────
-   In standalone bundle, each entry is a blob URL injected into
-   window.__resources by the bundler (see <meta name="ext-resource-dependency"> in index.html).
+   Direct relative paths to assets bundled with the site. Keys mirror the
+   data-resource-id values declared in <meta name="ext-resource-dependency">
+   tags in index.html so the rest of the codebase keeps using PHOTOS.<key>.
 */
-const PHOTOS = new Proxy({}, {
-  get(_, key) {
-    return (window.__resources && window.__resources[key]) || "";
-  }
-});
+const PHOTOS = {
+  heroDark:    "assets/portfolio/10_villa_patio_evening.jpg",
+  heroLight:   "assets/portfolio/10_villa_patio_evening.jpg",
+  ctaDark:     "assets/portfolio/10_villa_patio_evening.jpg",
+  ctaLight:    "assets/portfolio/10_villa_patio_evening.jpg",
+
+  philoDark:   "assets/portfolio/07_villa_pool_amenities.jpg",
+  philoLight:  "assets/portfolio/07_villa_pool_amenities.jpg",
+
+  interArch1:  "assets/portfolio/04_complex_morning.jpg",
+  interArch2:  "assets/portfolio/06_complex_premium_wood.jpg",
+  interArch3:  "assets/portfolio/05_complex_promenade.jpg",
+
+  cottage:     "assets/portfolio/01_cottage_twilight.jpg",
+  cityCott:    "assets/portfolio/02_cottage_day_with_car.jpg",
+  villa:       "assets/portfolio/09_villa_pool_sakura.jpg",
+  resComplex:  "assets/portfolio/04_complex_morning.jpg",
+  horeca:      "assets/portfolio/03_complex_active_cafe.jpg",
+  office:      "assets/portfolio/05_complex_promenade.jpg",
+  floatRest:   "assets/portfolio/05_complex_promenade.jpg",
+  floatSketch: "assets/portfolio/07_villa_pool_amenities.jpg",
+  floatHand:   "assets/portfolio/07_villa_pool_amenities.jpg",
+
+  tk1: "assets/portfolio/01_cottage_twilight.jpg",
+  tk2: "assets/portfolio/03_complex_active_cafe.jpg",
+  tk3: "assets/portfolio/06_complex_premium_wood.jpg",
+  tk4: "assets/portfolio/09_villa_pool_sakura.jpg",
+  tk5: "assets/portfolio/02_cottage_day_with_car.jpg",
+
+  cinematic1: "assets/portfolio/08_villa_entrance_gross.jpg",
+  cinematic2: "assets/portfolio/06_complex_premium_wood.jpg",
+
+  textureWood: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1800&q=85",
+};
 
 /* ─────────── ArchVisual · inline SVG fallback ───────────
    A guaranteed-render architectural sketch shown behind every image.
